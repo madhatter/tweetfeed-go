@@ -1,0 +1,8 @@
+# tweetfeed
+
+tweetfeed searches the twitter stream for defined hashtags and generates a rss feed (XML file) for your
+reading pleasures in your feedreader.
+
+This is a rewrite project to practice go coding from my old [Ruby
+project](https://github.com/madhatter/tweetfeed). So it's work in progress and
+not ready for use yet.
