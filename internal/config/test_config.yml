@@ -1,0 +1,5 @@
+---
+hashtags: foo, bar, baz
+outfile: /home/user/tweetfeed.xml
+loglevel: 3
+last_id: 827142200861609984

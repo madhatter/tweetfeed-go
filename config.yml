@@ -1,0 +1,5 @@
+---
+hashtags: hadoop, cloudera, hbase
+outfile: /home/awarnecke/tweetfeed.xml
+loglevel: 0
+last_id: 827142200861609984
