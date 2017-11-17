@@ -11,7 +11,17 @@ func init() {
 func TestParseConfigFile(t *testing.T) {
 	expectedConfig := Configuration{"foo, bar, baz", "/home/user/tweetfeed.xml", 3, 827142200861609984}
 
-	actualConfig := parseConfigFile()
+	actualConfig, _ := parseConfigFile()
+
+	if actualConfig != expectedConfig {
+		t.Errorf("Failed! Got %q != want %q", actualConfig, expectedConfig)
+	}
+}
+
+func TestGetConfig(t *testing.T) {
+	expectedConfig := Configuration{"foo, bar, baz", "/home/user/tweetfeed.xml", 3, 827142200861609984}
+
+	actualConfig, _ := GetConfig()
 
 	if actualConfig != expectedConfig {
 		t.Errorf("Failed! Got %q != want %q", actualConfig, expectedConfig)

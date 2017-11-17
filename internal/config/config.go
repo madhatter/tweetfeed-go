@@ -20,11 +20,11 @@ func init() {
 	configName = "config"
 }
 
-func GetConfig() Configuration {
+func GetConfig() (Configuration, error) {
 	return parseConfigFile()
 }
 
-func parseConfigFile() Configuration {
+func parseConfigFile() (Configuration, error) {
 	var configuration Configuration
 
 	viper.SetConfigName(configName)
@@ -42,7 +42,7 @@ func parseConfigFile() Configuration {
 	configuration.Loglevel = viper.GetInt("loglevel")
 	configuration.LastId = viper.GetInt("last_id")
 
-	return configuration
+	return configuration, nil
 }
 
 func (c *Configuration) SetHashtags(hashtags string) {

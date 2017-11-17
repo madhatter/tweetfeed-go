@@ -13,7 +13,7 @@ type configuration struct {
 }
 
 func main() {
-	config := config.GetConfig()
+	config, _ := config.GetConfig()
 	fmt.Printf("\n%s\n%d\n", config.Hashtags, config.LastId)
 
 	config.SetHashtags("mesos pesos")
